@@ -1,8 +1,12 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { View, Text, SafeAreaView, Image, Button } from "react-native";
 
 const HomeScreen = () => {
+  const navigation = useNavigation();
+
   return (
+
     <SafeAreaView className="bg-white h-full flex items-center justify-center">
       <View>
       <Image
@@ -27,9 +31,7 @@ const HomeScreen = () => {
         <Button
             title="Get Started"
             color={"#ffff"}
-          onPress={() => {
-            // Route to the next page
-          }}
+          onPress={() => navigation.navigate("DashboardScreen")}
         />
         </View>
       </View>
